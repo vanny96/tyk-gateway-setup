@@ -7,13 +7,10 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-
   project: root-app
-
   source:
     repoURL: https://github.com/vanny96/tyk-gateway-setup
     path: root-project/infra/tyk/api-definitions
     targetRevision: HEAD
-
   syncPolicy:
     automated: { }

@@ -7,11 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: root-app
-
   destination:
     server: https://kubernetes.default.svc
     namespace: tyk
-
   source:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
     targetRevision: 0.1.1
