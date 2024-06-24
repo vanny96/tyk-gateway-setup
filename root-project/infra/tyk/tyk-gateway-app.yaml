@@ -10,10 +10,14 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
+    namespace: tyk
+
 
   source:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
     targetRevision: 1.4.0
     chart: tyk-oss
   syncPolicy:
-    automated: {}
+    automated: { }
+    syncOptions:
+      - CreateNamespace=true

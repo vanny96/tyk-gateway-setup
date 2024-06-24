@@ -10,6 +10,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
+    namespace: tyk
 
   source:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
@@ -17,3 +18,5 @@ spec:
     chart: tyk-operator
   syncPolicy:
     automated: {}
+    syncOptions:
+      - CreateNamespace=true

@@ -10,6 +10,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
+    namespace: cert-manager
 
   source:
     repoURL: 'https://charts.jetstack.io'
@@ -21,3 +22,5 @@ spec:
           enabled: true
   syncPolicy:
     automated: {}
+    syncOptions:
+      - CreateNamespace=true
