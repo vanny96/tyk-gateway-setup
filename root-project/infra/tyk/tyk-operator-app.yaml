@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tyk-gateway-app
+  name: tyk-operator-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,8 +13,8 @@ spec:
 
   source:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
-    targetRevision: 1.4.0
-    chart: tyk-oss
+    targetRevision: 0.17.1
+    chart: tyk-operator
     helm:
       values: |
   syncPolicy:
