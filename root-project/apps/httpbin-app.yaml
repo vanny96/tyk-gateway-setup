@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpbin-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: apps
+    server: https://kubernetes.default.svc
+
+  project: root-app
+
+  source:
+    repoURL: https://github.com/vanny96/tyk-gateway-setup
+    path: root-project/apps/httpbin
+    targetRevision: HEAD
+
+  syncPolicy:
+    automated: { }
