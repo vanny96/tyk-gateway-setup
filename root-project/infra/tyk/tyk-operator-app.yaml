@@ -15,7 +15,5 @@ spec:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
     targetRevision: 0.17.1
     chart: tyk-operator
-    helm:
-      values: |
   syncPolicy:
     automated: {}

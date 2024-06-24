@@ -15,7 +15,5 @@ spec:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
     targetRevision: 1.4.0
     chart: tyk-oss
-    helm:
-      values: |
   syncPolicy:
     automated: {}
