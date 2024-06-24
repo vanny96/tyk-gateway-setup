@@ -14,3 +14,6 @@ spec:
     repoURL: https://github.com/vanny96/tyk-gateway-setup
     path: root-project/apps
     targetRevision: HEAD
+
+  syncPolicy:
+    automated: { }
