@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tyk-gateway-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: root-app
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tyk
+
+  source:
+    repoURL: 'https://helm.tyk.io/public/helm/charts/'
+    targetRevision: 1.4.0
+    chart: tyk-oss
+    helm:
+      values: |
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
