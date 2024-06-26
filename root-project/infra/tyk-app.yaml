@@ -11,7 +11,8 @@ spec:
   project: root-app
 
   source:
-    repoURL: https://github.com/vanny96/tyk-gateway-setup
+#    repoURL: https://github.com/vanny96/tyk-gateway-setup
+    repoURL: git://host.minikube.internal/
     path: root-project/infra/tyk
     targetRevision: HEAD
 
