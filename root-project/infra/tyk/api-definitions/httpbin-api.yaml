@@ -26,4 +26,4 @@ spec:
       versions:
         - Default
   quota_max: 2
-  quota_renewal_rate: 60
+  quota_renewal_rate: 120

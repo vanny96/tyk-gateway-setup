@@ -14,6 +14,13 @@ spec:
     repoURL: 'https://helm.tyk.io/public/helm/charts/'
     targetRevision: 1.4.0
     chart: tyk-oss
+    helm:
+      values: |
+        tyk-gateway:
+          gateway:
+            extraEnvs:
+              - name: TYK_GW_ENABLEREDISROLLINGLIMITER
+                value: "true"
   syncPolicy:
     automated: { }
     syncOptions:
