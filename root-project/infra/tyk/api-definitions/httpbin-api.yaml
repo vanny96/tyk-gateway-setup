@@ -25,5 +25,5 @@ spec:
       namespace: tyk
       versions:
         - Default
-  quota_max: 2
-  quota_renewal_rate: 120
+  rate: 2
+  per: 60
