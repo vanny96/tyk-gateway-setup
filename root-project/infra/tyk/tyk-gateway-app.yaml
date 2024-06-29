@@ -15,7 +15,10 @@ spec:
     targetRevision: 1.4.0
     chart: tyk-oss
     helm:
-      values: |
+      valuesObject:
+        global:
+          components:
+            pump: true
         tyk-gateway:
           gateway:
             extraEnvs:
